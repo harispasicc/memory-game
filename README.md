@@ -1,3 +1,13 @@
+Memory game is a game based on guessing pairs in the form of pictures
+
+Description
+The player guesses the pairs of pictures that at the beginning are turned to the front side, when the player guesses everything goes to the next level.
+Each subsequent level is a larger number of pictures When the player finishes they get a message where they have to enter their name
+
+Built with:
+
+-HTML -CSS -JS -ReactJS
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
