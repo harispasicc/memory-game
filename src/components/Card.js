@@ -1,30 +1,38 @@
-import React from "react";
-import cover from "../assets/images/cover.jpg";
-import classnames from "classnames";
+import cover from "../assets/images/cover/cover.jpg";
 
-function Card({ card, index, isInactive, isFlipped, onClick, isDisabled }) {
-  const handleClick = () => {
-    !isFlipped && !isDisabled && onClick(index);
+function Card({
+  columns,
+  card,
+  moves,
+  setMoves,
+  handleCardClick,
+  isflipped,
+  disabled,
+}) {
+  const cardClick = () => {
+    if (!disabled) {
+      handleCardClick(card);
+    }
+    setMoves(moves + 1);
   };
-
   return (
-    <div>
-      <div
-        className={classnames("card", {
-          "is-flipped": isFlipped,
-          "is-inactive": isInactive,
-        })}
-        onClick={handleClick}
-      >
-        <div className="card-face card-font-face">
-          <img src={cover} alt="backpic" className="img" />
-        </div>
-        <div className="card-face card-back-face">
-          <img src={card.image} alt="frontpic" className="img" />
-        </div>
+    <div className="card">
+      <div className={isflipped ? "isflipped" : ""}>
+        <img
+          id={`size-card-front-${columns}`}
+          className="front-card"
+          alt={"front"}
+          src={card.src}
+        />
+        <img
+          id={`size-card-back-${columns}`}
+          onClick={cardClick}
+          className="back-card"
+          alt={"back"}
+          src={cover}
+        />
       </div>
     </div>
   );
 }
-
 export default Card;
