@@ -38,7 +38,7 @@ function GameModal({
       return a.isPlayer;
     });
 
-    RealPlayers.sort((a, b) => a.NumOfTurns - b.NumOfTurns);
+    RealPlayers.sort((a, b) => a.turnNumber - b.turnNumber);
 
     let copyOfDefaultPlayer = players.filter(a => {
       return a.player === "unknown";
@@ -66,7 +66,6 @@ function GameModal({
     }
   };
   const clickButton = () => {
-    console.log("click");
     setShowModal(false);
   };
   return (

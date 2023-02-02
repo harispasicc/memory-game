@@ -15,7 +15,7 @@ function HistoryOfGames({ players, history }) {
                 <span>{index.player}</span>
               </td>
               <td>
-                <span>{index.NumOfTurns}</span>
+                <span>{index.turnNumber}</span>
               </td>
               <td>
                 <span>{index.finishedgame}</span>

@@ -81,7 +81,6 @@ const MemoryBoard = () => {
         setGridTemplate("repeat(4,1fr)");
         setColumns(4);
       }, 1000);
-      console.log(matchedCards.length);
     }
     if (matchedCards.length === 20) {
       setTimeout(() => {
@@ -93,6 +92,8 @@ const MemoryBoard = () => {
         setGridTemplate("repeat(6,1fr)");
         setCardGrid("35%");
         setColumns(6);
+        setMessage(false);
+        setShowModal(true);
       }, 1000);
     }
     if (matchedCards.length === 56) {
@@ -109,8 +110,8 @@ const MemoryBoard = () => {
     }
     if (matchedCards.length === 120) {
       setTimeout(() => {
-        setMessage(false);
-        setShowModal(true);
+        // setMessage(false);
+        // setShowModal(true);
       }, 800);
     }
   }, [matchedCards]);
@@ -148,7 +149,7 @@ const MemoryBoard = () => {
     setCard(ShuffledImages2x2);
     setGridTemplate("repeat(2,1fr)");
     setColumns(2);
-    setLevel(0);
+    setLevel(1);
     setMoves(0);
     setMessage(true);
     matchedCards.length = 0;
