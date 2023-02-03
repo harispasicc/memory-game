@@ -92,8 +92,6 @@ const MemoryBoard = () => {
         setGridTemplate("repeat(6,1fr)");
         setCardGrid("35%");
         setColumns(6);
-        setMessage(false);
-        setShowModal(true);
       }, 1000);
     }
     if (matchedCards.length === 56) {
@@ -110,8 +108,8 @@ const MemoryBoard = () => {
     }
     if (matchedCards.length === 120) {
       setTimeout(() => {
-        // setMessage(false);
-        // setShowModal(true);
+        setMessage(false);
+        setShowModal(true);
       }, 800);
     }
   }, [matchedCards]);
